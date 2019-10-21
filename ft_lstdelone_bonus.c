@@ -6,7 +6,7 @@
 /*   By: esidelar <esidelar@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 06:08:00 by esidelar     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 16:24:43 by esidelar    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/21 11:34:51 by esidelar    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,9 +15,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst != NULL)
-	{
-		(*del)(lst->content);
-		free(lst);
-	}
+	(*del)(lst->content);
+	free(lst);
 }

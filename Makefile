@@ -6,7 +6,7 @@
 #    By: esidelar <esidelar@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/07 14:37:49 by esidelar     #+#   ##    ##    #+#        #
-#    Updated: 2019/10/17 20:06:52 by esidelar    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/21 13:54:26 by esidelar    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -50,9 +50,10 @@ SRCS 	= 	ft_memset.c \
 
 BONUS	=	ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
 			ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c \
 			ft_lstclear_bonus.c \
 			ft_lstiter_bonus.c
 			

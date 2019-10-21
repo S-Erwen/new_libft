@@ -6,7 +6,7 @@
 /*   By: esidelar <esidelar@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 21:19:02 by esidelar     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 22:50:01 by esidelar    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/21 13:19:07 by esidelar    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,14 +19,12 @@ void			*ft_calloc(size_t nmemb, size_t size)
 	char		*s;
 	size_t		i;
 
-	if (size == 0)
+	if (!size || !nmemb)
 		return (NULL);
-	if (!nmemb)
-		size = 0;
 	if (!(s = (char *)malloc(size * nmemb)))
 		return (NULL);
 	i = 0;
-	while (i < nmemb)
+	while (i < nmemb * size)
 		s[i++] = 0;
 	dest = s;
 	return (dest);

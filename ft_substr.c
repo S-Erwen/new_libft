@@ -6,7 +6,7 @@
 /*   By: esidelar <esidelar@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 21:32:19 by esidelar     #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/17 03:01:52 by esidelar    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/21 16:07:25 by esidelar    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,17 +21,19 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	i = ft_strlen(s);
-	if (start > len)
+	if (start > i)
 	{
 		if (!(str = (char *)malloc(sizeof(char) * 2)))
 			return (NULL);
-		str[0] = s[i];
-		str[1] = '\0';
+		str[0] = '\0';
 		return (str);
 	}
-	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
-		return (NULL);
 	if (i < len)
+	{
+		if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
+			return (NULL);
+	}
+	else if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	i = 0;
 	while (s[start] && len > i)
